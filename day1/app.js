@@ -29,8 +29,7 @@ const moduleMassArr = fs.readFileSync('input.txt').toString().split("\n");
 // Loop through mass array & For each mass item(module), calculate fuel required and add to running total.
 let totalFuelReq = moduleMassArr.reduce((fuelAccumulator, currentModuleMass) => {
   currentModuleMass = parseInt(currentModuleMass)
-  console.log(currentModuleMass)
-  return (Math.floor(currentModuleMass / 3) - 2)
+  return (Math.floor(currentModuleMass / 3) - 2) + fuelAccumulator
 }, 0)
 
 console.log(totalFuelReq)
