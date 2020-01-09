@@ -20,8 +20,17 @@
 // What is the sum of the fuel requirements for all of the modules on your spacecraft?
 
 
+const fs = require('fs');
+
+
 // Save the mass for each module in array
+const moduleMassArr = fs.readFileSync('input.txt').toString().split("\n");
 
-// Loop through mass array
+// Loop through mass array & For each mass item(module), calculate fuel required and add to running total.
+let totalFuelReq = moduleMassArr.reduce((fuelAccumulator, currentModuleMass) => {
+  currentModuleMass = parseInt(currentModuleMass)
+  console.log(currentModuleMass)
+  return (Math.floor(currentModuleMass / 3) - 2)
+}, 0)
 
-// For each mass item(module), calculate fuel required and add to running total.
+console.log(totalFuelReq)
