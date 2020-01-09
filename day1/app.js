@@ -19,3 +19,9 @@
 
 // What is the sum of the fuel requirements for all of the modules on your spacecraft?
 
+
+// Save the mass for each module in array
+
+// Loop through mass array
+
+// For each mass item(module), calculate fuel required and add to running total.
